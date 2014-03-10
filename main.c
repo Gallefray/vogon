@@ -14,9 +14,8 @@ int main(int argc, char **argv)
 		islen--;
 		int i;
 		for (i = 0; i <= islen; i++) 
-		{
 			instr[i] = caesar_cyph(instr[i]);
-		}	
+
 		fprintf(stdout, "%s", instr);
 		
 	}
