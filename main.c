@@ -17,8 +17,6 @@ int main(int argc, char **argv)
 		{
 			instr[i] = caesar_cyph(instr[i]);
 		}	
-		// There's an easier way to do this, just figure out how many digits to shit by and add/sub that from the char num :P
-
 		fprintf(stdout, "%s", instr);
 		
 	}
@@ -37,16 +35,19 @@ int main(int argc, char **argv)
 
 char caesar_cyph(char in)
 {
-    if ((in >= 0x41 && in <= 0x5A) || (in >= 0x61 && in <= 0x7A))
+    if (in >= 97 && in <= 122)
     {
-	if (in >= 0x4E || in >= 0x6E)
-	{
+	if (in > 109)
 	    in -= 13;
-	}
-	else if (in <= 0x4D || in <= 0x6D)
-	{
+	else if (in <= 109)
 	    in += 13;
-	}
+    }
+    else if (in >= 65 && in <= 90) 
+    {
+	if (in > 77)
+	    in -= 13;
+	else if (in <= 77)
+	    in += 13;
     }
     return in;
 }
