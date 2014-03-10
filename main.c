@@ -11,9 +11,8 @@ int main(int argc, char **argv)
 	{
 		char* instr = argv[argc-1];
 		int islen = strlen(instr);
-		islen--;
 		int i;
-		for (i = 0; i <= islen; i++) 
+		for (i = 0; i < islen; i++) 
 			instr[i] = caesar_cyph(instr[i]);
 
 		fprintf(stdout, "%s", instr);
@@ -22,8 +21,7 @@ int main(int argc, char **argv)
 	else if (argc == 1)
 	{
 		char inchr;
-		int n;
-		while ((n = read(0, &inchr, 1)))
+		while (read(0, &inchr, 1))
 		{
 			inchr = caesar_cyph(inchr);
 			printf("%c", inchr);
