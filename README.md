@@ -1,5 +1,6 @@
 Hey! 
-First off, this is licensed under the GPLv2.
+First off, this is licensed under the GPLv2, you can find a copy of it in the 
+file calld LICENSE.
 
 Second off, you could easily change this to take an argument of the offset 
 to make it a proper Caesar Cypher.
